@@ -1,6 +1,7 @@
 using System.Threading.Tasks;
 using Abp.Authorization;
 using JesNm.Users.Dto;
+using System.Collections.Generic;
 
 namespace JesNm.Users
 {
@@ -29,5 +30,12 @@ namespace JesNm.Users
         {
             CheckErrors(await _userManager.RemoveFromRoleAsync(userId, roleName));
         }
+
+
+        public List<User> GetAllUser()
+        {
+            _userManager.GetUsersInOrganizationUnit(null, true);
+        }
+       
     }
 }

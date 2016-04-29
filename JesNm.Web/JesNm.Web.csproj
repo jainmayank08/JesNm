@@ -505,6 +505,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\Results\ChallengeResult.cs" />
     <Compile Include="Controllers\TenantsController.cs" />
+    <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Models\Layout\UserMenuOrLoginLinkViewModel.cs" />
     <Compile Include="Models\Account\LoginFormViewModel.cs" />
     <Compile Include="Models\Account\LoginViewModel.cs" />
@@ -537,6 +538,7 @@
     <Content Include="Views\Account\TenantSelection.cshtml" />
     <Content Include="Views\Layout\_UserMenuOrLoginLink.cshtml" />
     <Content Include="Views\Tenants\Index.cshtml" />
+    <Content Include="Views\User\Index.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -562,6 +564,7 @@
       <Name>JesNm.WebApi</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
