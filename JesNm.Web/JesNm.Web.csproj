@@ -330,12 +330,19 @@
     <Content Include="Content\themes\base\tooltip.css" />
     <Content Include="Content\toastr.css" />
     <Content Include="Content\toastr.min.css" />
+    <Content Include="css\animate.min.css" />
+    <Content Include="css\bootstrap.css" />
+    <Content Include="css\bootstrap.min.css" />
+    <Content Include="css\full-slider.css" />
     <Content Include="css\main.css">
       <DependentUpon>main.less</DependentUpon>
     </Content>
     <Content Include="css\main.min.css">
       <DependentUpon>main.css</DependentUpon>
     </Content>
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\owl.theme.css" />
+    <Content Include="css\style.css" />
     <Content Include="fonts\fontawesome-webfont.svg" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="images\abp-logo.png" />
@@ -344,11 +351,50 @@
     <Content Include="Content\flags\famfamfam-flags.png" />
     <Content Include="favicon.ico" />
     <Content Include="Global.asax" />
+    <Content Include="images\img\about.jpg" />
+    <Content Include="images\img\clients\01.jpg" />
+    <Content Include="images\img\clients\02.jpg" />
+    <Content Include="images\img\clients\03.jpg" />
+    <Content Include="images\img\header-bg.jpg" />
+    <Content Include="images\img\logo-icon.png" />
+    <Content Include="images\img\portfolio\01-preview.jpg" />
+    <Content Include="images\img\portfolio\01.jpg" />
+    <Content Include="images\img\portfolio\02-preview.jpg" />
+    <Content Include="images\img\portfolio\02.jpg" />
+    <Content Include="images\img\portfolio\03-preview.jpg" />
+    <Content Include="images\img\portfolio\03.jpg" />
+    <Content Include="images\img\portfolio\04-preview.jpg" />
+    <Content Include="images\img\portfolio\04.jpg" />
+    <Content Include="images\img\portfolio\05-preview.jpg" />
+    <Content Include="images\img\portfolio\05.jpg" />
+    <Content Include="images\img\portfolio\06-preview.jpg" />
+    <Content Include="images\img\portfolio\06.jpg" />
+    <Content Include="images\img\portfolio\07-preview.jpg" />
+    <Content Include="images\img\portfolio\07.jpg" />
+    <Content Include="images\img\portfolio\08-preview.jpg" />
+    <Content Include="images\img\portfolio\08.jpg" />
+    <Content Include="images\img\team\01.jpg" />
+    <Content Include="images\img\team\02.jpg" />
+    <Content Include="images\img\team\03.jpg" />
+    <Content Include="images\img\team\04.jpg" />
+    <Content Include="images\img\testimonials-bg.jpg" />
+    <Content Include="js\bootstrap.js" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\contact_me.js" />
+    <Content Include="js\jqBootstrapValidation.js" />
+    <Content Include="js\jquery.1.11.1.js" />
+    <Content Include="js\jquery.counterup.js" />
+    <Content Include="js\jquery.isotope.js" />
     <Content Include="js\main.js" />
     <Content Include="css\main.less" />
     <Content Include="css\main.css.map">
       <DependentUpon>main.css</DependentUpon>
     </Content>
+    <Content Include="js\modernizr.custom.js" />
+    <Content Include="js\owl.carousel.js" />
+    <Content Include="js\SmoothScroll.js" />
+    <Content Include="js\waypoints.js" />
+    <Content Include="js\wow.min.js" />
     <Content Include="log4net.config" />
     <Content Include="Content\toastr.scss" />
     <Content Include="Content\toastr.less" />
@@ -412,6 +458,7 @@
       <DependentUpon>Login.css</DependentUpon>
     </Content>
     <Content Include="Views\Tenants\Index.js" />
+    <Content Include="Web Front\index.html" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
