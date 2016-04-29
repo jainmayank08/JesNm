@@ -77,16 +77,16 @@ ul, ol {
 	background-color: rgba(248, 248, 248, 0);
 	border-color: rgba(231, 231, 231, 0);
 }
-#menu a.navbar-brand {
-	text-transform: uppercase;
-	font-size: 22px;
-	color: #fff;
-	font-weight: 600;
-	background-image: url(../img/logo-icon.png);
-	background-position: left center;
-	background-repeat: no-repeat;
-	padding-left: 34px;
-}
+    #menu a.navbar-brand {
+        text-transform: uppercase;
+        font-size: 22px;
+        color: #fff;
+        font-weight: 600;        
+        background-image: url('../images/img/logo-icon.png');
+        background-position: left center;
+        background-repeat: no-repeat;
+        padding-left: 34px;
+    }
 #menu a.navbar-brand i.fa {
 	color: #f38181;
 }
@@ -120,11 +120,11 @@ ul, ol {
 }
 /* Home Style */
 header {
-	background: url(../img/header-bg.jpg) no-repeat bottom center;
-	background-size: cover;
-	color: #cfcfcf;
-	position: relative;
-	height: 100%;
+    background-image: url('../images/img/header-bg.jpg') no-repeat bottom center;
+    background-size: cover;
+    color: #cfcfcf;
+    position: relative;
+    height: 100%;
 }
 header p {
 	color: #ffffff;
@@ -473,10 +473,10 @@ filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', end
 }
 /* Testimonials Section */
 #testimonials-section {
-	padding: 100px 0 60px 0;
-	background: url(../img/testimonials-bg.jpg);
-	background-size: cover;
-	background-attachment: fixed;
+    padding: 100px 0 60px 0;
+    background-image: url('../images/img/testimonials-bg.jpg');
+    background-size: cover;
+    background-attachment: fixed;
 }
 #testimonials-section i.fa {
 	color: #8e9599;
