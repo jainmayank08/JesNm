@@ -1,7 +1,10 @@
 using System.Threading.Tasks;
 using Abp.Authorization;
+using Abp.AutoMapper;
 using JesNm.Users.Dto;
 using System.Collections.Generic;
+using System.Linq;
+using Abp.Application.Services.Dto;
 
 namespace JesNm.Users
 {
@@ -32,10 +35,11 @@ namespace JesNm.Users
         }
 
 
-        public List<User> GetAllUser()
+        public ListResultOutput<ListAllUserOutput> GetAllUser()
         {
-            _userManager.GetUsersInOrganizationUnit(null, true);
+            return new ListResultOutput<ListAllUserOutput>(
+              _userManager.Users.ToList()
+              .MapTo<List<ListAllUserOutput>>());
         }
-       
     }
 }

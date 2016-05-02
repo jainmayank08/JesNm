@@ -20,9 +20,10 @@ namespace JesNm.Web.Controllers
 
         // GET: User
         public ActionResult Index()
-        {  
-            _userAppService.
-            return View();
+        {
+           
+            var users = _userAppService.GetAllUser();
+            return View(users);
         }
 
         // GET: User/Details/5

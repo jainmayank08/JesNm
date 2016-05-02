@@ -1,2 +1,24 @@
-﻿@model JesNm.Users.User
+﻿@using Abp.Web.Mvc.Extensions
 
+@model Abp.Application.Services.Dto.ListResultOutput<JesNm.Users.Dto.ListAllUserOutput>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>@L("Name")</th>
+            <th>@L("Surname")</th>
+            <th>@L("EmailAddress")</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var user in Model.Items)
+        {
+            <tr>
+                <td>@user.Name</td>
+                <td>@user.Surname</td>
+                <td>@user.EmailAddress</td>
+            </tr>
+        }
+    </tbody>
+</table>
