@@ -1,4 +1,5 @@
 ﻿using Abp.Web.Mvc.Authorization;
+using JesNm.Authorization;
 using JesNm.Users;
 using System;
 using System.Collections.Generic;
@@ -19,6 +20,7 @@ namespace JesNm.Web.Controllers
         }
 
         // GET: User
+        [AbpMvcAuthorize(PermissionNames.Administration_UserManagement_CreateUser)]
         public ActionResult Index()
         {
            
