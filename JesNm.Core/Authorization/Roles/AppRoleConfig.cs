@@ -22,6 +22,13 @@ namespace JesNm.Authorization.Roles
                     StaticRoleNames.Tenants.Admin,
                     MultiTenancySides.Tenant)
                 );
+
+
+            roleManagementConfig.StaticRoles.Add(
+              new StaticRoleDefinition(
+                  StaticRoleNames.Host.Member,
+                  MultiTenancySides.Host)
+              );
         }
     }
 }
