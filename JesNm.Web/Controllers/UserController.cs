@@ -38,6 +38,7 @@ namespace JesNm.Web.Controllers
         // GET: User/Create
         public ActionResult Create()
         {
+            
             return View();
         }
 
@@ -47,8 +48,7 @@ namespace JesNm.Web.Controllers
         {
             try
             {
-                // TODO: Add insert logic here
-
+                // TODO: Add insert logic here                
                 return RedirectToAction("Index");
             }
             catch

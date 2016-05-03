@@ -12,5 +12,7 @@ namespace JesNm.Users
         Task RemoveFromRole(long userId, string roleName);
 
         ListResultOutput<ListAllUserOutput> GetAllUser();
+
+        Task CreateUser(CreateUserInput input);
     }
 }

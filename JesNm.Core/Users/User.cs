@@ -13,7 +13,8 @@ namespace JesNm.Users
         public static string CreateRandomPassword()
         {
             return Guid.NewGuid().ToString("N").Truncate(16);
-        }
+        }        
+        
 
         public static User CreateTenantAdminUser(int tenantId, string emailAddress, string password)
         {
@@ -23,6 +24,18 @@ namespace JesNm.Users
                 UserName = AdminUserName,
                 Name = AdminUserName,
                 Surname = AdminUserName,
+                EmailAddress = emailAddress,
+                Password = new PasswordHasher().HashPassword(password)
+            };
+        }
+
+        public static User CreateMemberUser(string userName, string name, string surname, string emailAddress,string password)
+        {
+            return new User
+            {
+                UserName = userName,
+                Name = name,
+                Surname = surname,
                 EmailAddress = emailAddress,
                 Password = new PasswordHasher().HashPassword(password)
             };
