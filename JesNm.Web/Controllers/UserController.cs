@@ -15,10 +15,12 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Abp.AutoMapper;
+using AutoMapper;
+using JesNm.Users.Dto;
 
 namespace JesNm.Web.Controllers
 {
-    [AbpMvcAuthorize]
+   // [AbpMvcAuthorize]
     public class UserController : JesNmControllerBase
     {
         private readonly IUserAppService _userAppService;
@@ -61,16 +63,18 @@ namespace JesNm.Web.Controllers
                
                 //Create user
                 var user = new User
-                {                   
+                {    
+                    UserName = model.UserName,               
                     Name = model.Name,
                     Surname = model.Surname,
                     EmailAddress = model.EmailAddress,
-                    IsActive = true
+                    IsActive = true,
+                    Password = model.Password                
                 };
 
+                Mapper.CreateMap<User, CreateUserInput>();
 
-                
-               var u = user.MapTo<JesNm.Users.Dto.CreateUserInput>();
+                var u = user.MapTo<JesNm.Users.Dto.CreateUserInput>();
 
               await _userAppService.CreateUser(u);
 
