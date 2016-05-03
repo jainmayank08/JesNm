@@ -1,18 +1,13 @@
+﻿using System;
+using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
-using Abp.Application.Services.Dto;
-using JesNm.MultiTenancy;
-using JesNm.Users;
+using System.Linq;
+using System.Web;
 
-namespace JesNm.Web.Models.Account
+namespace JesNm.Web.Models.User
 {
-    public class RegisterViewModel : IInputDto
+    public class CreateUserViewModel
     {
-        /// <summary>
-        /// Not required for single-tenant applications.
-        /// </summary>
-        [StringLength(Tenant.MaxTenancyNameLength)]
-        public string TenancyName { get; set; }
-
         [Required]
         [StringLength(JesNm.Users.User.MaxNameLength)]
         public string Name { get; set; }
