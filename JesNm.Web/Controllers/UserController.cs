@@ -20,7 +20,7 @@ using JesNm.Users.Dto;
 
 namespace JesNm.Web.Controllers
 {
-   // [AbpMvcAuthorize]
+    //[AbpMvcAuthorize]
     public class UserController : JesNmControllerBase
     {
         private readonly IUserAppService _userAppService;
@@ -55,6 +55,7 @@ namespace JesNm.Web.Controllers
 
         [HttpPost]
         [UnitOfWork]
+       // [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
         public virtual async Task<ActionResult> Create(CreateUserViewModel model)
         {
             try
@@ -63,18 +64,18 @@ namespace JesNm.Web.Controllers
                
                 //Create user
                 var user = new User
-                {    
-                    UserName = model.UserName,               
+                {                   
+                    UserName = model.UserName,
                     Name = model.Name,
                     Surname = model.Surname,
                     EmailAddress = model.EmailAddress,
                     IsActive = true,
-                    Password = model.Password                
+                    Password = model.Password
                 };
 
-                Mapper.CreateMap<User, CreateUserInput>();
-
-                var u = user.MapTo<JesNm.Users.Dto.CreateUserInput>();
+                AutoMapper.Mapper.CreateMap<User, JesNm.Users.Dto.CreateUserInput>();
+                
+               var u = user.MapTo<JesNm.Users.Dto.CreateUserInput>();
 
               await _userAppService.CreateUser(u);
 

@@ -56,8 +56,12 @@ namespace JesNm.Users
              await _roleManager.GrantAllPermissionsAsync(memberRole);
 
              CheckErrors(await _userManager.AddToRoleAsync(user.Id, memberRole.Name));
-             await CurrentUnitOfWork.SaveChangesAsync();
-            
+             await CurrentUnitOfWork.SaveChangesAsync();            
         }
+
+        public User GetUserByUserName(string UserName)
+        {
+            return _userManager.Users.Where(x => x.UserName == UserName).FirstOrDefault();
+        } 
     }
 }

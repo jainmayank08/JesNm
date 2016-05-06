@@ -4,25 +4,25 @@
         return;
     }
    
-    //abp.event.on('abp.notifications.received', function (userNotification) {
-    //    console.log(userNotification);
-    //});
+    abp.event.on('abp.notifications.received', function (userNotification) {
+        console.log(userNotification);
+    });
 
-    //$.fn.serializeFormToObject = function () {
-    //    //serialize to array
-    //    var data = $(this).serializeArray();
+    $.fn.serializeFormToObject = function () {
+        //serialize to array
+        var data = $(this).serializeArray();
 
-    //    //add also disabled items
-    //    $(':disabled[name]', this).each(function () {
-    //        data.push({ name: this.name, value: $(this).val() });
-    //    });
+        //add also disabled items
+        $(':disabled[name]', this).each(function () {
+            data.push({ name: this.name, value: $(this).val() });
+        });
 
-    //    //map to object
-    //    var obj = {};
-    //    data.map(function (x) { obj[x.name] = x.value; });
+        //map to object
+        var obj = {};
+        data.map(function (x) { obj[x.name] = x.value; });
 
-    //    return obj;
-    //}
+        return obj;
+    }
 
     (function () {
         'use strict';
@@ -61,81 +61,81 @@
             offset: 80
         })
 
-        $(document).ready(function () {
-            $("#team").owlCarousel({
+        //$(document).ready(function () {
+        //    $("#team").owlCarousel({
 
-                navigation: false, // Show next and prev buttons
-                slideSpeed: 300,
-                paginationSpeed: 400,
-                autoHeight: true,
-                itemsCustom: [
-                              [0, 1],
-                              [450, 2],
-                              [600, 2],
-                              [700, 2],
-                              [1000, 4],
-                              [1200, 4],
-                              [1400, 4],
-                              [1600, 4]
-                ],
-            });
+        //        navigation: false, // Show next and prev buttons
+        //        slideSpeed: 300,
+        //        paginationSpeed: 400,
+        //        autoHeight: true,
+        //        itemsCustom: [
+        //                      [0, 1],
+        //                      [450, 2],
+        //                      [600, 2],
+        //                      [700, 2],
+        //                      [1000, 4],
+        //                      [1200, 4],
+        //                      [1400, 4],
+        //                      [1600, 4]
+        //        ],
+        //    });
 
-            $("#clients").owlCarousel({
+        //    $("#clients").owlCarousel({
 
-                navigation: false, // Show next and prev buttons
-                slideSpeed: 300,
-                paginationSpeed: 400,
-                autoHeight: true,
-                itemsCustom: [
-                              [0, 1],
-                              [450, 2],
-                              [600, 2],
-                              [700, 2],
-                              [1000, 4],
-                              [1200, 5],
-                              [1400, 5],
-                              [1600, 5]
-                ],
-            });
+        //        navigation: false, // Show next and prev buttons
+        //        slideSpeed: 300,
+        //        paginationSpeed: 400,
+        //        autoHeight: true,
+        //        itemsCustom: [
+        //                      [0, 1],
+        //                      [450, 2],
+        //                      [600, 2],
+        //                      [700, 2],
+        //                      [1000, 4],
+        //                      [1200, 5],
+        //                      [1400, 5],
+        //                      [1600, 5]
+        //        ],
+        //    });
 
-            $("#testimonial").owlCarousel({
-                navigation: false, // Show next and prev buttons
-                slideSpeed: 300,
-                paginationSpeed: 400,
-                singleItem: true
-            });
+            //$("#testimonial").owlCarousel({
+            //    navigation: false, // Show next and prev buttons
+            //    slideSpeed: 300,
+            //    paginationSpeed: 400,
+            //    singleItem: true
+            //});
 
         });
 
         /*====================================
         Portfolio Isotope Filter
         ======================================*/
-        $(window).load(function () {
-            var $container = $('.portfolio-items');
-            $container.isotope({
-                filter: '*',
-                animationOptions: {
-                    duration: 750,
-                    easing: 'linear',
-                    queue: false
-                }
-            });
-            $('.cat a').click(function () {
-                $('.cat .active').removeClass('active');
-                $(this).addClass('active');
-                var selector = $(this).attr('data-filter');
-                $container.isotope({
-                    filter: selector,
-                    animationOptions: {
-                        duration: 750,
-                        easing: 'linear',
-                        queue: false
-                    }
-                });
-                return false;
-            });
+        //$(window).load(function () {
+        //    var $container = $('.portfolio-items');
+        //    $container.isotope({
+        //        filter: '*',
+        //        animationOptions: {
+        //            duration: 750,
+        //            easing: 'linear',
+        //            queue: false
+        //        }
+        //    });
+        //    $('.cat a').click(function () {
+        //        $('.cat .active').removeClass('active');
+        //        $(this).addClass('active');
+        //        var selector = $(this).attr('data-filter');
+        //        $container.isotope({
+        //            filter: selector,
+        //            animationOptions: {
+        //                duration: 750,
+        //                easing: 'linear',
+        //                queue: false
+        //            }
+        //        });
+        //        return false;
+        //    });
 
-        });
+        //});
 
         /*====================================
         CounterUp
@@ -154,10 +154,10 @@
         WOW JS
         ======================================*/
 
-        new WOW().init();
+       // new WOW().init();
         //smoothScroll
-        smoothScroll.init();
+       // smoothScroll.init();
 
     }());
 
-})(jQuery);
+//})(jQuery);

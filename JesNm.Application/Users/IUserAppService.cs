@@ -14,5 +14,7 @@ namespace JesNm.Users
         ListResultOutput<ListAllUserOutput> GetAllUser();
 
         Task CreateUser(CreateUserInput input);
+
+        User GetUserByUserName(string UserName);
     }
 }

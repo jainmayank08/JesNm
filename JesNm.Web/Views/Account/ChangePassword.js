@@ -1,20 +1,19 @@
 ﻿(function () {
 
     $(function () {
-        $('#LoginButton').click(function (e) {
+        $('#ChangePasswordButton').click(function (e) {
            
             e.preventDefault();
             abp.ui.setBusy(
-                $('#LoginArea'),
+                $('#ChangePasswordArea'),
                 abp.ajax({
-                    url: abp.appPath + 'Account/Login',
+                    url: abp.appPath + 'Account/ChangePasswordSave',
                     type: 'POST',
                     data: JSON.stringify({
-                        tenancyName: $('#TenancyName').val(),
+                       
                         usernameOrEmailAddress: $('#EmailAddressInput').val(),
-                        password: $('#PasswordInput').val(),
-                        rememberMe: $('#RememberMeInput').is(':checked'),
-                        returnUrlHash: $('#ReturnUrlHash').val()
+                        currentPassword: $('#CurrentPasswordInput').val(),
+                        newPassword: $('#NewPasswordInput').val()
                     })
                 })
             );
