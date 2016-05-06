@@ -4,7 +4,9 @@
 <h1>@L("WellcomeMessage")</h1>
 <div class="row">
     <div class="col-md-12">
-
+        @if (IsGranted("Administration.UserManagement.CreateUser"))
+        {
+            <button id="CreateNewUserButton" class="btn btn-primary"><i class="fa fa-plus"></i> @L("CreateNewUser")</button>
+        }
     </div>
-
 </div>

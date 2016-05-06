@@ -53,6 +53,7 @@ namespace JesNm.Web.Controllers
 
         [HttpPost]
         [UnitOfWork]
+        [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
         public virtual async Task<ActionResult> Create(CreateUserViewModel model)
         {
             try
@@ -61,18 +62,20 @@ namespace JesNm.Web.Controllers
                
                 //Create user
                 var user = new User
-                {                   
+                {    
+                    UserName = model.UserName,
                     Name = model.Name,
                     Surname = model.Surname,
                     EmailAddress = model.EmailAddress,
-                    IsActive = true
+                    IsActive = true,
+                    Password = model.Password
                 };
 
-
+                AutoMapper.Mapper.CreateMap<User, JesNm.Users.Dto.CreateUserInput>();
                 
-               var u = user.MapTo<JesNm.Users.Dto.CreateUserInput>();
+                var u = user.MapTo<JesNm.Users.Dto.CreateUserInput>();
 
-              await _userAppService.CreateUser(u);
+                await _userAppService.CreateUser(u);
 
 
               return RedirectToAction("Index");

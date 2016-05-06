@@ -10,6 +10,7 @@ using Abp.Runtime.Caching;
 using Abp.Zero.Configuration;
 using JesNm.Authorization.Roles;
 using JesNm.MultiTenancy;
+using System.Threading.Tasks;
 
 namespace JesNm.Users
 {
@@ -47,6 +48,9 @@ namespace JesNm.Users
                 organizationUnitSettings,
                 userLoginAttemptRepository)
         {
+            
         }
+
+       
     }
 }

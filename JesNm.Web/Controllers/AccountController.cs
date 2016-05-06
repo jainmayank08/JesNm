@@ -33,6 +33,7 @@ namespace JesNm.Web.Controllers
         private readonly RoleManager _roleManager;
         private readonly IUnitOfWorkManager _unitOfWorkManager;
         private readonly IMultiTenancyConfig _multiTenancyConfig;
+        private readonly IUserAppService _userAppService;
 
         private IAuthenticationManager AuthenticationManager
         {
@@ -47,19 +48,21 @@ namespace JesNm.Web.Controllers
             UserManager userManager,
             RoleManager roleManager,
             IUnitOfWorkManager unitOfWorkManager,
-            IMultiTenancyConfig multiTenancyConfig)
+            IMultiTenancyConfig multiTenancyConfig,
+            IUserAppService userAppService)
         {
             _tenantManager = tenantManager;
             _userManager = userManager;
             _roleManager = roleManager;
             _unitOfWorkManager = unitOfWorkManager;
             _multiTenancyConfig = multiTenancyConfig;
+            _userAppService = userAppService;
         }
 
         #region Login / Logout
 
         public ActionResult Login(string returnUrl = "")
-        {
+         {
             if (string.IsNullOrWhiteSpace(returnUrl))
             {
                 returnUrl = Request.ApplicationPath;
@@ -99,6 +102,33 @@ namespace JesNm.Web.Controllers
 
             return Json(new MvcAjaxResponse { TargetUrl = returnUrl });
         }
+
+        public ActionResult ChangePassword(ChangePasswordViewModel loginModel)
+        {
+            return View(loginModel);
+        }  
+
+        [HttpPost]
+        public ActionResult ChangePasswordView(ChangePasswordViewModel loginModel)
+        {
+            CheckModelState();
+            User user = new User();
+            try
+            {
+                user = _userAppService.GetUserByUserName("jainmayank08");
+            }
+            catch (Exception ex)
+            {
+                
+                throw ex;
+            }
+            
+            if (user != null)
+            {
+                var result = _userManager.ChangePassword(user.Id, loginModel.CurrentPassword, loginModel.NewPassword);    
+            }            
+            return View();
+        }        
 
         private async Task<AbpUserManager<Tenant, Role, User>.AbpLoginResult> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
         {
@@ -146,6 +176,8 @@ namespace JesNm.Web.Controllers
                     return new UserFriendlyException(L("LoginFailed"));
             }
         }
+
+      
 
         public ActionResult Logout()
         {
