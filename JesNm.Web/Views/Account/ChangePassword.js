@@ -7,7 +7,7 @@
             abp.ui.setBusy(
                 $('#ChangePasswordArea'),
                 abp.ajax({
-                    url: abp.appPath + 'Account/ChangePasswordView',
+                    url: abp.appPath + 'Account/ChangePasswordSave',
                     type: 'POST',
                     data: JSON.stringify({
                        

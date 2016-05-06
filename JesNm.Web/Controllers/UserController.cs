@@ -18,7 +18,7 @@ using Abp.AutoMapper;
 
 namespace JesNm.Web.Controllers
 {
-    [AbpMvcAuthorize]
+    //[AbpMvcAuthorize]
     public class UserController : JesNmControllerBase
     {
         private readonly IUserAppService _userAppService;
@@ -53,7 +53,7 @@ namespace JesNm.Web.Controllers
 
         [HttpPost]
         [UnitOfWork]
-        [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
+       // [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
         public virtual async Task<ActionResult> Create(CreateUserViewModel model)
         {
             try

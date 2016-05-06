@@ -109,25 +109,24 @@ namespace JesNm.Web.Controllers
         }  
 
         [HttpPost]
-        public ActionResult ChangePasswordView(ChangePasswordViewModel loginModel)
+        public ActionResult ChangePasswordSave(ChangePasswordViewModel loginModel)
         {
             CheckModelState();
             User user = new User();
             try
             {
-                user = _userAppService.GetUserByUserName("jainmayank08");
+                user = _userAppService.GetUserByUserName(loginModel.UsernameOrEmailAddress);
             }
             catch (Exception ex)
             {
-                
                 throw ex;
             }
             
             if (user != null)
             {
                 var result = _userManager.ChangePassword(user.Id, loginModel.CurrentPassword, loginModel.NewPassword);    
-            }            
-            return View();
+            }
+            return RedirectToAction("Index");
         }        
 
         private async Task<AbpUserManager<Tenant, Role, User>.AbpLoginResult> GetLoginResultAsync(string usernameOrEmailAddress, string password, string tenancyName)
