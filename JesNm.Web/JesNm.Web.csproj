@@ -380,6 +380,17 @@
     <Content Include="images\img\team\02.jpg" />
     <Content Include="images\img\team\03.jpg" />
     <Content Include="images\img\team\04.jpg" />
+    <Content Include="images\img\team\Anjana-Pranav-Gandhi-323x316-300x293.jpg" />
+    <Content Include="images\img\team\chetan-kavdia-386x376-300x292.jpg" />
+    <Content Include="images\img\team\Dr-Ranjanbala-Jain-300x369-244x300.jpg" />
+    <Content Include="images\img\team\Gaurav-Jain-298x401-223x300.jpg" />
+    <Content Include="images\img\team\Harsh-Rawat-254x300.jpg" />
+    <Content Include="images\img\team\Pramod-Bharal-250x300.jpg" />
+    <Content Include="images\img\team\Pranav-388x504-231x300.jpg" />
+    <Content Include="images\img\team\Rajendra-Jain-300x400-225x300.jpg" />
+    <Content Include="images\img\team\Rajesh-Jain-239x300.png" />
+    <Content Include="images\img\team\Sanat-Kumar-Jain-225x300.jpg" />
+    <Content Include="images\img\team\spjain-247x300.jpg" />
     <Content Include="images\img\testimonials-bg.jpg" />
     <Content Include="js\bootstrap.js" />
     <Content Include="js\bootstrap.min.js" />
@@ -489,6 +500,7 @@
     </Content>
     <Content Include="Views\Tenants\Index.js" />
     <Content Include="Web Front\index.html" />
+    <Content Include="Web Front\jesMain.js" />
     <Content Include="Web.config">
       <SubType>Designer</SubType>
     </Content>
