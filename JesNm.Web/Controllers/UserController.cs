@@ -40,6 +40,8 @@ namespace JesNm.Web.Controllers
         {
            
             var users = _userAppService.GetAllUser();
+
+            //Mapper.CreateMap(List<ListUserViewModel>, users.Items.ToList());
             return View(users);
         }
 
