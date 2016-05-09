@@ -15,7 +15,8 @@ using System.Threading.Tasks;
 using System.Web;
 using System.Web.Mvc;
 using Abp.AutoMapper;
-using JesNm.Authorization.Roles;
+using AutoMapper;
+using JesNm.Users.Dto;
 
 namespace JesNm.Web.Controllers
 {
@@ -63,7 +64,7 @@ namespace JesNm.Web.Controllers
                
                 //Create user
                 var user = new User
-                {    
+                {                   
                     UserName = model.UserName,
                     Name = model.Name,
                     Surname = model.Surname,
@@ -74,9 +75,9 @@ namespace JesNm.Web.Controllers
 
                 AutoMapper.Mapper.CreateMap<User, JesNm.Users.Dto.CreateUserInput>();
                 
-                var u = user.MapTo<JesNm.Users.Dto.CreateUserInput>();
+               var u = user.MapTo<JesNm.Users.Dto.CreateUserInput>();
 
-                await _userAppService.CreateUser(u);
+              await _userAppService.CreateUser(u);
 
 
               return RedirectToAction("Index");
@@ -133,55 +134,5 @@ namespace JesNm.Web.Controllers
                 return View();
             }
         }
-
-
-        
-        #region Role
-        public ActionResult CreateRole()
-        {
-            var model = new JesNm.Web.Models.User.CreateRoleViewModel();
-            return View("CreateRole", model);
-        }
-
-        [HttpPost]
-        [UnitOfWork]
-        // [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
-        public virtual async Task<ActionResult> Create(CreateRoleViewModel model)
-        {
-            try
-            {
-                CheckModelState();
-
-                //Create user
-                var user = new Role
-                {
-                    DisplayName = model.DisplayName,
-                    Name = model.Name,
-                    IsStatic = true,
-                    IsDefault = false
-                   
-                };
-
-                AutoMapper.Mapper.CreateMap<User, JesNm.Users.Dto.CreateUserInput>();
-
-                var u = user.MapTo<JesNm.Users.Dto.CreateUserInput>();
-
-                await _userAppService.CreateUser(u);
-
-
-                return RedirectToAction("Index");
-
-            }
-            catch (UserFriendlyException ex)
-            {
-                ViewBag.ErrorMessage = ex.Message;
-
-                return View("Register", model);
-            }
-        }
-
-        #endregion
-
-
     }
 }
