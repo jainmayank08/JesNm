@@ -29,5 +29,12 @@ namespace JesNm.Roles
 
             await _roleManager.SetGrantedPermissionsAsync(role, grantedPermissions);
         }
+
+        public async Task CreateRole(CreateRolesInput input)
+        {
+            var role = Role.CreateRole(input.DisplayName, input.Name, input.IsStatic, input.IsDefault);
+            CheckErrors(await _roleManager.CreateAsync(role));
+            await CurrentUnitOfWork.SaveChangesAsync();             
+        }
     }
 }
