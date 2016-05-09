@@ -3,6 +3,12 @@
 
 @model  Abp.Application.Services.Dto.ListResultOutput<JesNm.Users.Dto.ListAllUserOutput>
 
+<script src="@Url.Content("~/js/jquery.1.11.1.js")"></script>
+<link href="@Url.Content("~/Content/Gridmvc.css")" rel="stylesheet" />
+<link href="@Url.Content("~/Content/bootstrap.min.css")" rel="stylesheet" />
+
+<script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script> 
+
 @Html.Grid(Model.Items).Named("x").Columns(columns =>
         {
 
