@@ -120,7 +120,8 @@ ul, ol {
 }
 /* Home Style */
 header {
-    background-image: url('../images/img/header-bg.jpg') no-repeat bottom center;
+    /*background-image: url('../images/img/header-bg.jpg') no-repeat bottom center;*/
+    background-image: url('../images/img/header-bg.jpg');
     background-size: cover;
     color: #cfcfcf;
     position: relative;
