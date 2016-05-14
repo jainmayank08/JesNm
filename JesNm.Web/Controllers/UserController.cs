@@ -17,6 +17,8 @@ using System.Web.Mvc;
 using Abp.AutoMapper;
 using AutoMapper;
 using JesNm.Users.Dto;
+using JesNm.Authorization.Roles;
+using JesNm.Roles;
 
 namespace JesNm.Web.Controllers
 {
@@ -24,18 +26,22 @@ namespace JesNm.Web.Controllers
     public class UserController : JesNmControllerBase
     {
         private readonly IUserAppService _userAppService;
+        private readonly IRoleAppService _roleAppService;
 
-        public UserController(IUserAppService userAppService)
+        public UserController(IUserAppService userAppService, IRoleAppService roleAppService)
         {   
             _userAppService = userAppService;
+            _roleAppService = roleAppService;
         }
 
         // GET: User
-       // [AbpMvcAuthorize(PermissionNames.Administration_UserManagement_CreateUser)]
+        [AbpMvcAuthorize(PermissionNames.Administration_UserManagement_CreateUser)]
         public ActionResult Index()
         {
            
             var users = _userAppService.GetAllUser();
+
+            //Mapper.CreateMap(List<ListUserViewModel>, users.Items.ToList());
             return View(users);
         }
 
@@ -55,7 +61,7 @@ namespace JesNm.Web.Controllers
 
         [HttpPost]
         [UnitOfWork]
-       // [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
+        [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
         public virtual async Task<ActionResult> Create(CreateUserViewModel model)
         {
             try
@@ -134,5 +140,50 @@ namespace JesNm.Web.Controllers
                 return View();
             }
         }
+
+        #region Role
+        public ActionResult CreateRole()
+        {
+            var model = new JesNm.Web.Models.User.CreateRoleViewModel();
+            return View("CreateRole", model);
+        }
+
+        [HttpPost]
+        [UnitOfWork]
+        [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
+        public virtual async Task<ActionResult> CreateRole(CreateRoleViewModel model)
+        {
+            try
+            {
+                CheckModelState();
+
+                //Create role
+                var role = new Role
+                {
+                    DisplayName = model.DisplayName,
+                    Name = model.Name,
+                    IsStatic = true,
+                    IsDefault = false
+
+                };
+
+                AutoMapper.Mapper.CreateMap<Role, JesNm.Roles.Dto.CreateRolesInput>();
+
+                var u = role.MapTo<JesNm.Roles.Dto.CreateRolesInput>();
+
+                await _roleAppService.CreateRole(u);
+
+                return RedirectToAction("Index");
+
+            }
+            catch (UserFriendlyException ex)
+            {
+                ViewBag.ErrorMessage = ex.Message;
+
+                return View("Register", model);
+            }
+        }
+
+        #endregion
     }
 }

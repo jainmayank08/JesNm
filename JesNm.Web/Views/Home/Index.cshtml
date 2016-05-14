@@ -9,7 +9,10 @@
     <div class="col-md-12">
         @if (IsGranted("Administration.UserManagement.CreateUser"))
         {
-            <button id="CreateNewUserButton" class="btn btn-primary"><i class="fa fa-plus"></i> @L("CreateNewUser")</button>
+            <a class="btn btn-success" href="@Url.Action("Create", "User")"><i class="fa fa-sign-in"></i> @L("Create User")</a>
+            <br /><hr />
+             <a class="btn btn-success" href="@Url.Action("CreateRole", "User")"><i class="fa fa-sign-in"></i> @L("Create Role")</a>
         }
     </div>
+
 </div>

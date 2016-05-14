@@ -1,0 +1,52 @@
+﻿@model JesNm.Web.Models.User.CreateRoleViewModel
+@using Abp.Web.Mvc.Extensions
+
+@{
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<div class="container">
+    <div id="LoginArea" class="row">
+        <div class="col-lg-12">
+            <div class="well bs-component">
+                <form class="form-horizontal" action="@(Url.Action("CreateRole", "User"))" method="POST">
+                    <fieldset>
+                        <legend>@L("Create Role")</legend>
+
+
+                        <div class="form-group">
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" name="Name" value="@Model.Name" placeholder="@L("Name")" required>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-lg-12">
+                                <input type="text" class="form-control" name="DisplayName" value="@Model.DisplayName" placeholder="@L("DisplayName")" >
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <div class="col-lg-12">
+                                <input type="checkbox" class="form-control" name="IsDefault" placeholder="@L("Default")" >
+                            </div>
+                        </div>
+
+                       
+
+                        <div class="form-group">
+                            <div class="col-lg-12">
+                                <button type="submit" id="CreateRole" class="btn btn-primary"><i class="fa fa-sign-in"></i> @L("Create Role")</button>
+                            </div>
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+

@@ -7,5 +7,6 @@ namespace JesNm.Roles
     public interface IRoleAppService : IApplicationService
     {
         Task UpdateRolePermissions(UpdateRolePermissionsInput input);
+        Task CreateRole(CreateRolesInput input);
     }
 }
