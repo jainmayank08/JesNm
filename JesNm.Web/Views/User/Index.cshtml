@@ -9,8 +9,22 @@
 
 <script src="@Url.Content("~/Scripts/gridmvc.min.js")"></script> 
 
+@helper CustomRenderingOfColumn(JesNm.Users.Dto.ListAllUserOutput listAllUserOutput)
+{
+    if (listAllUserOutput.MemberImg != null)
+    {
+        <img src="listAllUserOutput.MemberImg" alt="test" \>
+    }
+    else
+    {
+        <text>No</text>
+    }
+}
+
 @Html.Grid(Model.Items).Named("x").Columns(columns =>
         {
+            columns.Add(c=>c.MemberImg).Encoded(false).Sanitized(false).Titled("Memeber Photo")
+                .RenderValueAs(o => CustomRenderingOfColumn(o));
 
             columns.Add(c => c.Name).Encoded(false)
               .Sanitized(false).Titled("Name").Css("table-cell-right-border").SetInitialFilter(GridMvc.Filtering.GridFilterType.Contains, "").Filterable(true);
@@ -18,5 +32,8 @@
 
             columns.Add(c => c.Surname).Titled("Surname").Filterable(true).Css("table-cell-right-border");
             columns.Add(c => c.EmailAddress).Titled("Email Address").Filterable(true).Css("table-cell-right-border");
-            
+
         })
+
+        
+

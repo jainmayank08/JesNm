@@ -28,7 +28,7 @@ namespace JesNm.EntityFramework
         public JesNmDbContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {
-
+           
         }
 
         //This constructor is used in tests
