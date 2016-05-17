@@ -28,5 +28,7 @@ namespace JesNm.Web.Models.User
         public string Password { get; set; }
 
         public bool IsExternalLogin { get; set; }
+
+        public string MemberImg { get; set; }
     }
 }

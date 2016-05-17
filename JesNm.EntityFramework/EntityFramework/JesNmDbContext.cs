@@ -3,6 +3,9 @@ using Abp.Zero.EntityFramework;
 using JesNm.Authorization.Roles;
 using JesNm.MultiTenancy;
 using JesNm.Users;
+using System.Data.Entity;
+using JesNm.Jes;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace JesNm.EntityFramework
 {
@@ -28,14 +31,25 @@ namespace JesNm.EntityFramework
         public JesNmDbContext(string nameOrConnectionString)
             : base(nameOrConnectionString)
         {
-
+            Configuration.LazyLoadingEnabled = false;
         }
 
         //This constructor is used in tests
         public JesNmDbContext(DbConnection connection)
             : base(connection, true)
         {
+            Configuration.LazyLoadingEnabled = false;
+        }
 
+        public virtual DbSet<Chapter> Chapters { get; set; }
+
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Chapter>()
+               .Property(p => p.Id).HasColumnName("ChapterID")
+               .HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
         }
     }
 }

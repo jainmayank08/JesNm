@@ -13,7 +13,9 @@ namespace JesNm.Users
         public static string CreateRandomPassword()
         {
             return Guid.NewGuid().ToString("N").Truncate(16);
-        }        
+        }
+
+        public string MemberImg { get; set; }
         
 
         public static User CreateTenantAdminUser(int tenantId, string emailAddress, string password)
