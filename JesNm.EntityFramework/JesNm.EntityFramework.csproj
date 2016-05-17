@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="EntityFramework\JesNmDbContext.cs" />
+    <Compile Include="EntityFramework\Repositories\ChapterRepository.cs" />
     <Compile Include="EntityFramework\Repositories\JesNmRepositoryBase.cs" />
     <Compile Include="Migrations\201506210746108_AbpZero_Initial.cs" />
     <Compile Include="Migrations\201506210746108_AbpZero_Initial.Designer.cs">

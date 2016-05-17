@@ -105,6 +105,8 @@
   <ItemGroup>
     <Compile Include="JesNmApplicationModule.cs" />
     <Compile Include="JesNmAppServiceBase.cs" />
+    <Compile Include="Jes\ChapterService.cs" />
+    <Compile Include="Jes\IChapterService.cs" />
     <Compile Include="MultiTenancy\Dto\CreateTenantInput.cs" />
     <Compile Include="MultiTenancy\ITenantAppService.cs" />
     <Compile Include="MultiTenancy\Dto\TenantListDto.cs" />
