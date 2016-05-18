@@ -1,4 +1,4 @@
-﻿using JesNm.Jes;
+using JesNm.Jes;
 using System.Collections.Generic;
 using System.Web.Mvc;
 using Abp.AutoMapper;
@@ -18,7 +18,7 @@ namespace JesNm.Web.Controllers
         // GET: Chapter
         public ActionResult Index()
         {
-            var chapters =_chapterService.GetAllChapter();
+            var chapters = _chapterService.GetAllChapter();
             AutoMapper.Mapper.CreateMap<ChapterListDto, JesNm.Web.Models.Jes.GetChapterViewModel>();
 
             var chaptersview = AutoMapper.Mapper.Map<List<JesNm.Web.Models.Jes.GetChapterViewModel>>(chapters);
