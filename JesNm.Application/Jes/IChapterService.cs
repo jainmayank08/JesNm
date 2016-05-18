@@ -1,4 +1,5 @@
 ﻿using Abp.Application.Services;
+using JesNm.Jes.Dto;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +10,6 @@ namespace JesNm.Jes
 {
     public interface IChapterService : IApplicationService
     {
-        List<Chapter> GetAllChapter();
+        List<ChapterListDto> GetAllChapter();
     }
 }

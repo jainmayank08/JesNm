@@ -1,4 +1,5 @@
-﻿using JesNm.Reporsitory;
+﻿using JesNm.Jes.Dto;
+using JesNm.Reporsitory;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,9 +16,9 @@ namespace JesNm.Jes
         {
             _chapterRepository = ChapterRepository;
         }
-        public List<Chapter> GetAllChapter()
+        public List<ChapterListDto> GetAllChapter()
         {
-           return _chapterRepository.GetAllChapter();
+            return AutoMapper.Mapper.Map <List<ChapterListDto>>(_chapterRepository.GetAllChapter());
         }
     }
 }

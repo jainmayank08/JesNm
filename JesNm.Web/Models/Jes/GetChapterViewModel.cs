@@ -7,6 +7,7 @@ namespace JesNm.Web.Models.Jes
 {
     public class GetChapterViewModel
     {
+        public int Id { get; set; }
         public string ChapterName { get; set; }
     }
 }
