@@ -127,8 +127,12 @@ header {
     position: relative;
     height: 100%;
 }
+header {
+     opacity: 0.4;
+     filter: alpha(opacity=40); /* For IE8 and earlier */
+} 
 header p {
-	color: #ffffff;
+	color: #19B5FE;
 	font-size: 18px;
 	text-transform: uppercase;
 	margin-bottom: 60px;
@@ -144,7 +148,7 @@ header p {
 .intro-text H1 {
 	font-size: 70px;
 	text-transform: uppercase;
-	color: #FFFFFF;
+	color: #0727e5;
 	font-weight: 500;
 }
 .intro-text .brand {

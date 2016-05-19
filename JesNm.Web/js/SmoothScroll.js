@@ -5,8 +5,9 @@
 //  - Balazs Galambosi (maintainer)  
 //  - Michael Herf     (Pulse Algorithm)
 
-(function(){
-  
+(function () {
+
+     
 // Scroll Variables (tweakable)
 var defaultOptions = {
 
@@ -84,6 +85,8 @@ function initTest() {
  * Sets up scrolls array, determines if frames are involved.
  */
 function init() {
+
+    alert(111);
   
     if (!document.body) return;
 
