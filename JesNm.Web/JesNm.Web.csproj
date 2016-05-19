@@ -530,6 +530,13 @@
     <Compile Include="App_Start\JesNmWebModule.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.cs" />
+    <Compile Include="Components\HtmlExtensionsButton.cs" />
+    <Compile Include="Components\HtmlExtensionsCheckBox.cs" />
+    <Compile Include="Components\HtmlExtensionsCommon.cs" />
+    <Compile Include="Components\HtmlExtensionsImage.cs" />
+    <Compile Include="Components\HtmlExtensionsPassword.cs" />
+    <Compile Include="Components\HtmlExtensionsRadioButton.cs" />
+    <Compile Include="Components\HtmlExtensionsTextBox.cs" />
     <Compile Include="Controllers\AboutController.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\ChapterController.cs" />
