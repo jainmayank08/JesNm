@@ -130,6 +130,6 @@ WOW JS
 
  new WOW().init();
 //smoothScroll
- //new smoothScroll.init();
+ smoothScroll.init();
 
 }());

@@ -90,6 +90,16 @@ ul, ol {
 #menu a.navbar-brand i.fa {
 	color: #f38181;
 }
+
+#menu.navbar-default-sec .navbar-nav > li > a {
+	text-transform: uppercase;
+	color: #ffffff;
+    background-color:black;
+	font-size: 12px;
+	letter-spacing: 1px;
+	font-weight: 500;
+}
+
 #menu.navbar-default .navbar-nav > li > a {
 	text-transform: uppercase;
 	color: #ffffff;
