@@ -7,6 +7,7 @@ using System.Linq;
 using Abp.Application.Services.Dto;
 using JesNm.Authorization.Roles;
 
+
 namespace JesNm.Users
 {
     /* THIS IS JUST A SAMPLE. */
@@ -35,7 +36,7 @@ namespace JesNm.Users
         public async Task RemoveFromRole(long userId, string roleName)
         {
             CheckErrors(await _userManager.RemoveFromRoleAsync(userId, roleName));
-        }
+        }     
 
 
         public ListResultOutput<ListAllUserOutput> GetAllUser()
