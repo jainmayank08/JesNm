@@ -86,7 +86,7 @@ function initTest() {
  */
 function init() {
 
-    alert(111);
+   
   
     if (!document.body) return;
 
