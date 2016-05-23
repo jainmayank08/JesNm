@@ -1,4 +1,5 @@
 ﻿
+@using JesNm
 @model List<JesNm.Web.Models.Jes.GetChapterViewModel>
 
 @foreach (var item in Model)
@@ -29,3 +30,5 @@
     @Html.HiddenFor(m => m[i].Id)
   
 }
+
+@Html.BootstrapButton("test", "btn btn-warning", "","",false,false,HtmlExtensionsCommon.HtmlButtonTypes.submit,"",null);
