@@ -313,6 +313,22 @@
     <Content Include="admin-lte\css\skins\skin-yellow.min.css" />
     <Content Include="admin-lte\css\skins\_all-skins.css" />
     <Content Include="admin-lte\css\skins\_all-skins.min.css" />
+    <Content Include="Content\AdminLTE.css" />
+    <Content Include="Content\AdminLTE.min.css" />
+    <Content Include="Content\skins\skin-black.css" />
+    <Content Include="Content\skins\skin-black.min.css" />
+    <Content Include="Content\skins\skin-blue.css" />
+    <Content Include="Content\skins\skin-blue.min.css" />
+    <Content Include="Content\skins\skin-green.css" />
+    <Content Include="Content\skins\skin-green.min.css" />
+    <Content Include="Content\skins\skin-purple.css" />
+    <Content Include="Content\skins\skin-purple.min.css" />
+    <Content Include="Content\skins\skin-red.css" />
+    <Content Include="Content\skins\skin-red.min.css" />
+    <Content Include="Content\skins\skin-yellow.css" />
+    <Content Include="Content\skins\skin-yellow.min.css" />
+    <Content Include="Content\skins\_all-skins.css" />
+    <Content Include="Content\skins\_all-skins.min.css" />
     <Content Include="admin-lte\dist\css\AdminLTE.css" />
     <Content Include="admin-lte\dist\css\AdminLTE.min.css" />
     <Content Include="admin-lte\dist\css\skins\skin-black-light.css" />
@@ -392,8 +408,8 @@
     <Content Include="admin-lte\documentation\index.html" />
     <Content Include="admin-lte\documentation\style.css" />
     <Content Include="admin-lte\Gruntfile.js" />
-    <Content Include="admin-lte\js\app.js" />
-    <Content Include="admin-lte\js\app.min.js" />
+    <Content Include="js\app.js" />
+    <Content Include="js\app.min.js" />
     <Content Include="admin-lte\pages\calendar.html" />
     <Content Include="admin-lte\pages\charts\chartjs.html" />
     <Content Include="admin-lte\pages\charts\flot.html" />
@@ -1643,6 +1659,8 @@
     <Content Include="Views\Shared\_GridPager.cshtml" />
     <Content Include="Views\Shared\_Grid.cshtml" />
     <Content Include="Views\Chapter\Index.cshtml" />
+    <Content Include="Views\Dashboard\Layout\_Main.cshtml" />
+    <Content Include="Views\Shared\_MainDashboard.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1669,6 +1687,7 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="admin-lte\js\" />
     <Folder Include="fonts\font-awesome\css\" />
     <Folder Include="fonts\font-awesome\fonts\" />
   </ItemGroup>
