@@ -2,7 +2,12 @@
 @using JesNm
 @model List<JesNm.Web.Models.Jes.GetChapterViewModel>
 
-@foreach (var item in Model)
+@{
+    
+    Layout = "~/Views/Shared/_MainDashboard.cshtml";
+}
+
+@*@foreach (var item in Model)
 {
     <div>@item.ChapterName</div>
     
@@ -31,4 +36,6 @@
   
 }
 
-@Html.BootstrapButton("test", "btn btn-warning", "","",false,false,HtmlExtensionsCommon.HtmlButtonTypes.submit,"",null);
+@Html.BootstrapButton("test", "btn btn-warning", "","",false,false,HtmlExtensionsCommon.HtmlButtonTypes.submit,"",null);*@
+
+

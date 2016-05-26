@@ -21,7 +21,7 @@ namespace JesNm.Web
                     .Include("~/Content/font-awesome.min.css", new CssRewriteUrlTransform())                   
                     .Include("~/Content/skin/_all-skins.min.css", new CssRewriteUrlTransform())
                     .Include("~/Content/AdminLTE.min.css", new CssRewriteUrlTransform())
-                    .Include("~/plugins/daterangepicker/daterangepicker-bs3.css", new CssRewriteUrlTransform())
+                    .Include("~/admin-lte/plugins/daterangepicker/daterangepicker-bs3.css", new CssRewriteUrlTransform())
                 );
 
             //~/Bundles/vendor/js/top (These scripts should be included in the head of the page)
@@ -60,17 +60,17 @@ namespace JesNm.Web
                         "~/Abp/Framework/scripts/libs/abp.sweet-alert.js",
 
                         "~/Scripts/jquery.signalR-2.2.0.min.js",
-                        "~/plugins/daterangepicker/daterangepicker.js",
-                        "~/plugins/daterangepicker/moment.min.js",
+                        "~/admin-lte/plugins/daterangepicker/daterangepicker.js",
+                        "~/admin-lte/plugins/daterangepicker/moment.min.js",
                         "~/js/app.min.js",
-                        "~/plugins/sparkline/jquery.sparkline.min.js",
-                        "~/plugins/sparkline/jquery.sparkline.min.js",
-                        "~/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js",
-                        "~/plugins/jvectormap/jquery-jvectormap-world-mill-en.js",
-                        "~/plugins/iCheck/icheck.min.js",
-                        "~/plugins/slimScroll/jquery.slimscroll.min.js",
-                        "~/plugins/chartjs/Chart.min.js",                        
-                        "~/plugins/datepicker/bootstrap-datepicker.js"
+                        "~/admin-lte/plugins/sparkline/jquery.sparkline.min.js",
+                        "~/admin-lte/plugins/sparkline/jquery.sparkline.min.js",
+                        "~/admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js",
+                        "~/admin-lte/plugins/jvectormap/jquery-jvectormap-world-mill-en.js",
+                        "~/admin-lte/plugins/iCheck/icheck.min.js",
+                        "~/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js",
+                        "~/admin-lte/plugins/chartjs/Chart.min.js",
+                        "~/admin-lte/plugins/datepicker/bootstrap-datepicker.js"
 
                     )
                 );

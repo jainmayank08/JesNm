@@ -19,7 +19,7 @@ namespace JesNm.Reporsitory
 
         public List<Chapter> GetAllChapter()
         {
-            return Context.Chapters.ToList();
+            return new List<Chapter>();//return Context.Chapters.ToList();
         }
     }
 }
