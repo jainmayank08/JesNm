@@ -13,15 +13,7 @@ namespace JesNm.Web
             //~/Bundles/vendor/css
             bundles.Add(
                 new StyleBundle("~/Bundles/vendor/css")
-                    .Include("~/Content/themes/base/all.css", new CssRewriteUrlTransform())
-                    .Include("~/Content/bootstrap-cosmo.min.css", new CssRewriteUrlTransform())
-                    .Include("~/Content/toastr.min.css", new CssRewriteUrlTransform())
-                    .Include("~/Scripts/sweetalert/sweet-alert.css", new CssRewriteUrlTransform())
-                    .Include("~/Content/flags/famfamfam-flags.css", new CssRewriteUrlTransform())
-                    .Include("~/Content/font-awesome.min.css", new CssRewriteUrlTransform())                   
-                    .Include("~/Content/skin/_all-skins.min.css", new CssRewriteUrlTransform())
-                    .Include("~/Content/AdminLTE.min.css", new CssRewriteUrlTransform())
-                    .Include("~/admin-lte/plugins/daterangepicker/daterangepicker-bs3.css", new CssRewriteUrlTransform())
+                   
                 );
 
             //~/Bundles/vendor/js/top (These scripts should be included in the head of the page)
@@ -38,12 +30,9 @@ namespace JesNm.Web
                 new ScriptBundle("~/Bundles/vendor/js/bottom")
                     .Include(
                         "~/Scripts/json2.min.js",
-
                         "~/Scripts/jquery-2.2.0.min.js",
                         "~/Scripts/jquery-ui-1.11.4.min.js",
-
                         "~/Scripts/bootstrap.min.js",
-
                         "~/Scripts/moment-with-locales.min.js",
                         "~/Scripts/jquery.validate.min.js",
                         "~/Scripts/jquery.blockUI.js",
@@ -51,18 +40,16 @@ namespace JesNm.Web
                         "~/Scripts/sweetalert/sweet-alert.min.js",
                         "~/Scripts/others/spinjs/spin.js",
                         "~/Scripts/others/spinjs/jquery.spin.js",
-
                         "~/Abp/Framework/scripts/abp.js",
                         "~/Abp/Framework/scripts/libs/abp.jquery.js",
                         "~/Abp/Framework/scripts/libs/abp.toastr.js",
                         "~/Abp/Framework/scripts/libs/abp.blockUI.js",
                         "~/Abp/Framework/scripts/libs/abp.spin.js",
                         "~/Abp/Framework/scripts/libs/abp.sweet-alert.js",
-
                         "~/Scripts/jquery.signalR-2.2.0.min.js",
-                        "~/admin-lte/plugins/daterangepicker/daterangepicker.js",
-                        "~/admin-lte/plugins/daterangepicker/moment.min.js",
                         "~/js/app.min.js",
+                        "~/admin-lte/plugins/daterangepicker/daterangepicker.js",
+                        "~/admin-lte/plugins/daterangepicker/moment.min.js",                        
                         "~/admin-lte/plugins/sparkline/jquery.sparkline.min.js",
                         "~/admin-lte/plugins/sparkline/jquery.sparkline.min.js",
                         "~/admin-lte/plugins/jvectormap/jquery-jvectormap-1.2.2.min.js",
@@ -71,7 +58,6 @@ namespace JesNm.Web
                         "~/admin-lte/plugins/slimScroll/jquery.slimscroll.min.js",
                         "~/admin-lte/plugins/chartjs/Chart.min.js",
                         "~/admin-lte/plugins/datepicker/bootstrap-datepicker.js"
-
                     )
                 );
 
@@ -80,13 +66,24 @@ namespace JesNm.Web
             //~/Bundles/css
             bundles.Add(
                 new StyleBundle("~/Bundles/css")
-                    .Include("~/css/main.css")
+                    //.Include("~/css/main.css")
+                    .Include("~/css/bootstrap.min.css", new CssRewriteUrlTransform())
+                    ////.Include("~/Content/themes/base/all.css", new CssRewriteUrlTransform())
+                    ////.Include("~/Content/bootstrap-cosmo.min.css", new CssRewriteUrlTransform())
+                    .Include("~/admin-lte/css/AdminLTE.css", new CssRewriteUrlTransform())
+                    .Include("~/admin-lte/css/skin/_all-skins.css", new CssRewriteUrlTransform())
+                    //.Include("~/Content/toastr.min.css", new CssRewriteUrlTransform())
+                    //.Include("~/Scripts/sweetalert/sweet-alert.css", new CssRewriteUrlTransform())
+                    //.Include("~/Content/flags/famfamfam-flags.css", new CssRewriteUrlTransform())
+                    //.Include("~/Content/font-awesome.min.css", new CssRewriteUrlTransform())
+                    //.Include("~/admin-lte/plugins/daterangepicker/daterangepicker-bs3.css", new CssRewriteUrlTransform())
                 );
 
             //~/Bundles/js
             bundles.Add(
                 new ScriptBundle("~/Bundles/js")
                     .Include("~/js/main.js")
+
                 );
         }
     }
