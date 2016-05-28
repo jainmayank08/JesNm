@@ -1,6 +1,12 @@
 ﻿@using Abp.Web.Mvc.Extensions
 @using GridMvc.Html
 
+@{
+    //ViewBag.ActiveMenu = "Home"; //The menu item will be active for this page.
+    Layout = "~/Views/Shared/_MainDashboard.cshtml";
+}
+
+
 @model  Abp.Application.Services.Dto.ListResultOutput<JesNm.Users.Dto.ListAllUserOutput>
 
 <script src="@Url.Content("~/js/jquery.1.11.1.js")"></script>

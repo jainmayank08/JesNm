@@ -35,7 +35,7 @@ namespace JesNm.Web.Controllers
         }
 
         // GET: User
-        [AbpMvcAuthorize(PermissionNames.Administration_UserManagement_CreateUser)]
+        //[AbpMvcAuthorize(PermissionNames.Administration_UserManagement_CreateUser)]
         public ActionResult Index()
         {
            
@@ -61,7 +61,7 @@ namespace JesNm.Web.Controllers
 
         [HttpPost]
         [UnitOfWork]
-        [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
+       // [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
         public virtual async Task<ActionResult> Create(CreateUserViewModel model)
         {
             try
@@ -150,7 +150,7 @@ namespace JesNm.Web.Controllers
 
         [HttpPost]
         [UnitOfWork]
-        [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
+       // [AbpMvcAuthorize("Administration.UserManagement.CreateUser")]
         public virtual async Task<ActionResult> CreateRole(CreateRoleViewModel model)
         {
             try
