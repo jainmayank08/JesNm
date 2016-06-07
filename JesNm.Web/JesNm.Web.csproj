@@ -1687,8 +1687,8 @@
     <Content Include="Views\Shared\_GridPager.cshtml" />
     <Content Include="Views\Shared\_Grid.cshtml" />
     <Content Include="Views\Chapter\Index.cshtml" />
-    <Content Include="Views\Dashboard\Layout\_Main.cshtml" />
     <Content Include="Views\Shared\_MainDashboard.cshtml" />
+    <Content Include="Views\Shared\_SideMenu.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
